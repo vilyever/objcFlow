@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE640A4B1D58232900652BAC /* objcFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = FE640A4A1D58232900652BAC /* objcFlow.h */; };
+		FE640A4B1D58232900652BAC /* objcFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = FE640A4A1D58232900652BAC /* objcFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE640A521D58232900652BAC /* objcFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A471D58232900652BAC /* objcFlow.framework */; };
 		FE640A571D58232900652BAC /* objcFlowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE640A561D58232900652BAC /* objcFlowTests.m */; };
+		FE640A641D58234C00652BAC /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FE640A611D58234C00652BAC /* Cartfile */; };
+		FE640A651D58234C00652BAC /* objcFlow.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE640A621D58234C00652BAC /* objcFlow.podspec */; };
+		FE640A691D58236700652BAC /* VDFlow.h in Headers */ = {isa = PBXBuildFile; fileRef = FE640A671D58236700652BAC /* VDFlow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE640A6A1D58236700652BAC /* VDFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = FE640A681D58236700652BAC /* VDFlow.m */; };
+		FE640A6E1D58248600652BAC /* objcBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6B1D58248600652BAC /* objcBlock.framework */; };
+		FE640A6F1D58248600652BAC /* objcHook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6C1D58248600652BAC /* objcHook.framework */; };
+		FE640A701D58248600652BAC /* objcWeakRef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6D1D58248600652BAC /* objcWeakRef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,14 @@
 		FE640A511D58232900652BAC /* objcFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE640A561D58232900652BAC /* objcFlowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcFlowTests.m; sourceTree = "<group>"; };
 		FE640A581D58232900652BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE640A611D58234C00652BAC /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FE640A621D58234C00652BAC /* objcFlow.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcFlow.podspec; sourceTree = "<group>"; };
+		FE640A631D58234C00652BAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE640A671D58236700652BAC /* VDFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDFlow.h; sourceTree = "<group>"; };
+		FE640A681D58236700652BAC /* VDFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDFlow.m; sourceTree = "<group>"; };
+		FE640A6B1D58248600652BAC /* objcBlock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcBlock.framework; path = Carthage/Build/iOS/objcBlock.framework; sourceTree = "<group>"; };
+		FE640A6C1D58248600652BAC /* objcHook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcHook.framework; path = Carthage/Build/iOS/objcHook.framework; sourceTree = "<group>"; };
+		FE640A6D1D58248600652BAC /* objcWeakRef.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcWeakRef.framework; path = Carthage/Build/iOS/objcWeakRef.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE640A6E1D58248600652BAC /* objcBlock.framework in Frameworks */,
+				FE640A6F1D58248600652BAC /* objcHook.framework in Frameworks */,
+				FE640A701D58248600652BAC /* objcWeakRef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +71,15 @@
 		FE640A3D1D58232900652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE640A6B1D58248600652BAC /* objcBlock.framework */,
+				FE640A6C1D58248600652BAC /* objcHook.framework */,
+				FE640A6D1D58248600652BAC /* objcWeakRef.framework */,
 				FE640A491D58232900652BAC /* objcFlow */,
 				FE640A551D58232900652BAC /* objcFlowTests */,
 				FE640A481D58232900652BAC /* Products */,
+				FE640A611D58234C00652BAC /* Cartfile */,
+				FE640A621D58234C00652BAC /* objcFlow.podspec */,
+				FE640A631D58234C00652BAC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +97,8 @@
 			children = (
 				FE640A4A1D58232900652BAC /* objcFlow.h */,
 				FE640A4C1D58232900652BAC /* Info.plist */,
+				FE640A671D58236700652BAC /* VDFlow.h */,
+				FE640A681D58236700652BAC /* VDFlow.m */,
 			);
 			path = objcFlow;
 			sourceTree = "<group>";
@@ -93,6 +119,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE640A691D58236700652BAC /* VDFlow.h in Headers */,
 				FE640A4B1D58232900652BAC /* objcFlow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +205,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE640A651D58234C00652BAC /* objcFlow.podspec in Resources */,
+				FE640A641D58234C00652BAC /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE640A6A1D58236700652BAC /* VDFlow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +344,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +364,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcFlow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
