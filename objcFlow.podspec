@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcFlow/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcBlock'
+  s.dependency 'objcWeakRef'
+  s.dependency 'objcHook'
 
 end
