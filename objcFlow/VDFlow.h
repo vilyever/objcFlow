@@ -62,6 +62,7 @@
 #pragma mark Properties
 @property (nonatomic, assign, readonly) BOOL isMain;
 @property (nonatomic, weak) VDFlow *parentFlow;
+@property (nonatomic, strong, readonly) NSMutableArray<__kindof VDFlow *> *childFlowArray;
 
 @property (nonatomic, strong, readonly) NSMutableArray<__kindof UIViewController<VDFlowDelegate> *> *delegates;
 @property (nonatomic, strong, readonly) NSMutableArray<__kindof VDFlow *> *branchArray;
@@ -69,6 +70,7 @@
 #pragma mark Protected Method
 - (void)mainFlowDidChange:(VDFlow *)mainFlow;
 - (void)childFlowDidChange:(VDFlow *)childFlow;
+- (void)parentFlowDidChange:(VDFlow *)parentFlow;
 - (void)flowDidUnbindAllDelegates;
 
 #pragma mark Private Method

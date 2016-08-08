@@ -20,6 +20,8 @@
 
 @property (nonatomic, assign, readwrite) BOOL isMain;
 
+@property (nonatomic, strong, readwrite) NSMutableArray<__kindof VDFlow *> *childFlowArray;
+
 @property (nonatomic, strong, readwrite) NSMutableArray<__kindof UIViewController<VDFlowDelegate> *> *delegates;
 @property (nonatomic, strong, readwrite) NSMutableArray<__kindof VDFlow *> *branchArray;
 
@@ -106,6 +108,10 @@
     if (self.parentFlow) {
         [self.parentFlow childFlowDidChange:self];
     }
+    
+    for (VDFlow *child in [self.childFlowArray copy]) {
+        [child parentFlowDidChange:self];
+    }
 }
 
 - (void)triggerDelegate:(UIViewController<VDFlowDelegate> *)delegate {
@@ -145,6 +151,14 @@
 
 
 #pragma mark Properties
+- (NSMutableArray<__kindof VDFlow *> *)childFlowArray {
+    if (!_childFlowArray) {
+        _childFlowArray = [NSMutableArray new];
+    }
+    
+    return _childFlowArray;
+}
+
 - (NSMutableArray<__kindof UIViewController<VDFlowDelegate> *> *)delegates {
     if (!_delegates) {
         _delegates = [NSMutableArray new];
@@ -159,6 +173,18 @@
     }
     
     return _branchArray;
+}
+
+- (void)setParentFlow:(VDFlow *)parentFlow {
+    if (_parentFlow != parentFlow) {
+        if (_parentFlow) {
+            [_parentFlow.childFlowArray removeObject:self];
+        }
+        
+        _parentFlow = parentFlow;
+        [_parentFlow.childFlowArray addObject:self];
+    }
+    
 }
 
 #pragma mark Overrides
@@ -185,6 +211,10 @@
 }
 
 - (void)childFlowDidChange:(VDFlow *)childFlow {
+    
+}
+
+- (void)parentFlowDidChange:(VDFlow *)parentFlow {
     
 }
 
