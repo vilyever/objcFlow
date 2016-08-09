@@ -96,19 +96,20 @@
         [self triggerDelegate:delegate];
     }
     
-    if (self.isMain) {
-        for (VDFlow *branch in [self.branchArray copy]) {
-            [branch mainFlowDidChange:self];
-        }
+    for (VDFlow *child in [self.childFlowArray copy]) {
+        [child parentFlowDidChange:self];
     }
     
     if (self.parentFlow) {
         [self.parentFlow childFlowDidChange:self];
     }
     
-    for (VDFlow *child in [self.childFlowArray copy]) {
-        [child parentFlowDidChange:self];
+    if (self.isMain) {
+        for (VDFlow *branch in [self.branchArray copy]) {
+            [branch mainFlowDidChange:self];
+        }
     }
+   
 }
 
 - (void)triggerDelegate:(UIViewController<VDFlowDelegate> *)delegate {
@@ -116,14 +117,15 @@
 }
 
 - (void)triggerDelegate:(UIViewController<VDFlowDelegate> *)delegate cancelOnViewDisappeared:(BOOL)cancelOnViewDisappeared {
-    if (!cancelOnViewDisappeared
+    if (![delegate isKindOfClass:[UIViewController class]]
+        || !cancelOnViewDisappeared
         || (cancelOnViewDisappeared
             && (delegate.isViewLoaded
                 && delegate.view.window)))  {
-                if ([delegate respondsToSelector:@selector(flowDidChange:)]) {
-                    [delegate flowDidChange:self];
-                }
-            }
+        if ([delegate respondsToSelector:@selector(flowDidChange:)]) {
+            [delegate flowDidChange:self];
+        }
+    }
 }
 
 - (void)triggerDelegateAfterViewWillAppear:(UIViewController<VDFlowDelegate> *)delegate {
