@@ -1,3 +1,4 @@
 github "vilyever/objcBlock" "master"
 github "vilyever/objcWeakRef" "master"
 github "vilyever/objcHook" "master"
+github "vilyever/objcObject" "master"

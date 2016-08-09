@@ -8,6 +8,7 @@
 
 #import "VDFlow.h"
 
+#import <objcObject/objcObject.h>
 #import <objcBlock/objcBlock.h>
 #import <objcWeakRef/objcWeakRef.h>
 #import <objcHook/objcHook.h>
@@ -32,13 +33,9 @@
 
 #pragma mark Constructor
 + (instancetype)mainFlow {
-    static id _sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedInstance = [ [ [self class] alloc] initWithMain:YES];
-    } );
-    
-    return _sharedInstance;
+    return [self vd_sharedInstance:^id{
+        return [[self alloc] initWithMain:YES];
+    }];
 }
 
 + (instancetype)newBranchFlow {

@@ -35,5 +35,6 @@ Pod::Spec.new do |s|
   s.dependency 'objcBlock'
   s.dependency 'objcWeakRef'
   s.dependency 'objcHook'
+  s.dependency 'objcObject'
 
 end

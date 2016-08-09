@@ -17,6 +17,7 @@
 		FE640A6E1D58248600652BAC /* objcBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6B1D58248600652BAC /* objcBlock.framework */; };
 		FE640A6F1D58248600652BAC /* objcHook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6C1D58248600652BAC /* objcHook.framework */; };
 		FE640A701D58248600652BAC /* objcWeakRef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640A6D1D58248600652BAC /* objcWeakRef.framework */; };
+		FE640BFC1D596A5700652BAC /* objcObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE640BFB1D596A5700652BAC /* objcObject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FE640A6B1D58248600652BAC /* objcBlock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcBlock.framework; path = Carthage/Build/iOS/objcBlock.framework; sourceTree = "<group>"; };
 		FE640A6C1D58248600652BAC /* objcHook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcHook.framework; path = Carthage/Build/iOS/objcHook.framework; sourceTree = "<group>"; };
 		FE640A6D1D58248600652BAC /* objcWeakRef.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcWeakRef.framework; path = Carthage/Build/iOS/objcWeakRef.framework; sourceTree = "<group>"; };
+		FE640BFB1D596A5700652BAC /* objcObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcObject.framework; path = Carthage/Build/iOS/objcObject.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			files = (
 				FE640A6E1D58248600652BAC /* objcBlock.framework in Frameworks */,
 				FE640A6F1D58248600652BAC /* objcHook.framework in Frameworks */,
+				FE640BFC1D596A5700652BAC /* objcObject.framework in Frameworks */,
 				FE640A701D58248600652BAC /* objcWeakRef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		FE640A3D1D58232900652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE640BFB1D596A5700652BAC /* objcObject.framework */,
 				FE640A6B1D58248600652BAC /* objcBlock.framework */,
 				FE640A6C1D58248600652BAC /* objcHook.framework */,
 				FE640A6D1D58248600652BAC /* objcWeakRef.framework */,
@@ -416,6 +420,7 @@
 				FE640A5D1D58232900652BAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE640A5E1D58232900652BAC /* Build configuration list for PBXNativeTarget "objcFlowTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				FE640A601D58232900652BAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
