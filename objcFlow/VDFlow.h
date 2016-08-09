@@ -71,7 +71,13 @@
 - (void)mainFlowDidChange:(VDFlow *)mainFlow;
 - (void)childFlowDidChange:(VDFlow *)childFlow;
 - (void)parentFlowDidChange:(VDFlow *)parentFlow;
+
 - (void)flowDidUnbindAllDelegates;
+
+- (void)delegateDidTriggered:(UIViewController<VDFlowDelegate> *)delegate;
+- (void)branchFlowDidTriggered:(VDFlow *)branchFlow;
+- (void)childFlowDidTriggered:(VDFlow *)childFlow;
+- (void)parentFlowDidTriggered:(VDFlow *)parentFlow;
 
 #pragma mark Private Method
 

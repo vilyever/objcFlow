@@ -98,15 +98,18 @@
     
     for (VDFlow *child in [self.childFlowArray copy]) {
         [child parentFlowDidChange:self];
+        [self childFlowDidTriggered:child];
     }
     
     if (self.parentFlow) {
         [self.parentFlow childFlowDidChange:self];
+        [self parentFlowDidTriggered:self.parentFlow];
     }
     
     if (self.isMain) {
         for (VDFlow *branch in [self.branchArray copy]) {
             [branch mainFlowDidChange:self];
+            [self branchFlowDidTriggered:branch];
         }
     }
    
@@ -124,6 +127,7 @@
                 && delegate.view.window)))  {
         if ([delegate respondsToSelector:@selector(flowDidChange:)]) {
             [delegate flowDidChange:self];
+            [self delegateDidTriggered:delegate];
         }
     }
 }
@@ -218,6 +222,22 @@
 }
 
 - (void)flowDidUnbindAllDelegates {
+    
+}
+
+- (void)delegateDidTriggered:(UIViewController<VDFlowDelegate> *)delegate {
+    
+}
+
+- (void)branchFlowDidTriggered:(VDFlow *)branchFlow {
+    
+}
+
+- (void)childFlowDidTriggered:(VDFlow *)childFlow {
+    
+}
+
+- (void)parentFlowDidTriggered:(VDFlow *)parentFlow {
     
 }
 
