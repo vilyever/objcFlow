@@ -1,4 +1,4 @@
-github "vilyever/objcBlock" "master"
-github "vilyever/objcWeakRef" "master"
-github "vilyever/objcHook" "master"
-github "vilyever/objcObject" "master"
+github "vilyever/objcBlock" == 1.1.0
+github "vilyever/objcWeakRef" == 1.1.0
+github "vilyever/objcHook" == 1.1.0
+github "vilyever/objcObject" == 1.1.0
